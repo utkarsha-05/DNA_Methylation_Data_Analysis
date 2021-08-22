@@ -12,11 +12,14 @@ The datasets we used are mainly a subset of the data from the publication "Hiera
 
 ### Get Data
 
-wget https://zenodo.org/record/557099/files/subset_1.fastq?download=1
-wget https://zenodo.org/record/557099/files/subset_2.fastq?download=1
+````python
+  wget https://zenodo.org/record/557099/files/subset_1.fastq?download=1
+  ````
+````python
+  wget https://zenodo.org/record/557099/files/subset_2.fastq?download=1
+  ````
 
-
-Quality Control
+### Quality Control
 
 Install fastqc - conda install -c bioconda fastqc
 Run Quality Check-   fastqc subset_1.fastq?download=1  subset_2.fastq?download=1
@@ -27,7 +30,7 @@ This tells that the per base sequence quality was quite good for the datasets. T
 
 The “per base sequence content” segment from the fastq reports shows a drop of “C” and a rise of “T” bases. It’s because- Every C-meth stays a C and every normal C becomes a T during the bisulfite conversion.
 
-Bismark alignment
+### Mapping
   Mapping of bisulfite-sequencing reads needs different aligners from the       normal NGS sequencing read aligners. As in a BS-seq reads, all the C’s are C-meth’s and a T can be a T or a C, the mapper for methylation data needs to find out what is what. Bismark is such a suitable aligner for BS-seq reads.
 
                          Only Chromosome_1 was used as our reference genome for aligning       
@@ -44,7 +47,8 @@ Bismark generates a .bam file as its final output. The alignment stats from    t
 
 
 Userguide - https://rawgit.com/FelixKrueger/Bismark/master/Docs/Bismark_User_Guide.html
-Generating a sorted bam file with Samtools
+
+### Generating a sorted bam file with Samtools
 
 MethylDackel needs a sorted bam file for its execution. For that, Samtools is used to generate a sorted bam file from the output bam file of aligner.
 
@@ -52,11 +56,11 @@ Install SamTools using  conda install -c bioconda samtools
 Sort the output file from alignment with Samtools samtools sort subset_1_bismark_bt2_pe.bam -o bam_sorted_by_samtools.bam
 
 
-Methylation Bias & Metric Extraction
+### Methylation Bias & Metric Extraction
 Methylation bias plot is helpful for looking at the distribution of methylation and searching for any possible bias.
 
 Install MethylDackel   conda install -c bioconda methyldackel
- Now Plot the Methylation Bias MethylDackel mbias Chr1_ref.fa.gz bam_sorted_by_samtools.bam methylation_bias_by_methylDackel
+Now Plot the Methylation Bias MethylDackel mbias Chr1_ref.fa.gz bam_sorted_by_samtools.bam methylation_bias_by_methylDackel
 
 
 
@@ -67,7 +71,7 @@ To extract the methylation on the resulting BAM file of the alignment step Methy
 
  
 
-Visualization
+### Visualization
 BedGraph-to-bigWig was used to convert the Bedgraph file containing methylation level to a bigwig file
 
 Install bedGraphtoBigWig conda install -c bioconda ucsc-bedgraphtobigwig
@@ -90,7 +94,8 @@ Finally, the methylation level of our data around the transcription start site (
 plotProfile --matrixFile output_from_ComputeMatrix --outFileName output_from_plotProfile
 
 This plot shows the methylation level around all Transcription Start Sites of chrosome_1. When located at gene promoters, DNA methylation is usually a repressive mark.
-References: 
 
-Acknowledgements
+### References 
+
+### Acknowledgements
 We acknowledge the HackBio Team for the platform created to bring us all together learning and working as a team progressively on a bioinformatics track.

@@ -169,11 +169,11 @@ This plot shows the methylation level around all Transcription Start Sites of ch
 
 ### References 
 1. Lin, I.-H., D.-T. Chen, Y.-F. Chang, Y.-L. Lee, C.-H. Su et al., 2015 Hierarchical Clustering of Breast Cancer Methylomes Revealed Differentially Methylated and Expressed Breast Cancer Genes (O. El-Maarri, Ed.). PLOS ONE 10: e0118453.
-2. https://github.com/dpryan79/MethylDackel
-3. Ramírez, Fidel, Devon P. Ryan, Björn Grüning, Vivek Bhardwaj, Fabian Kilpert, Andreas S. Richter, Steffen Heyne, Friederike Dündar, and Thomas Manke. deepTools2: A next Generation Web Server for Deep-Sequencing Data Analysis. Nucleic Acids Research (2016). doi:10.1093/nar/gkw257.     
-4. Joachim Wolff, Devon Ryan, 2019 DNA Methylation data analysis (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html Online; accessed Mon Aug 23 2021
-5. Batut et al., 2018 Community-Driven Data Analysis Training for Biology Cell Systems 10.1016/j.cels.2018.05.012
-6. Krueger, Felix, and Simon R. Andrews. “Bismark: A Flexible Aligner and Methylation Caller for Bisulfite-Seq Applications.” Bioinformatics, vol. 27, no. 11, 2011, pp. 1571–1572., doi:10.1093/bioinformatics/btr167. 
+2. Ramírez, Fidel, Devon P. Ryan, Björn Grüning, Vivek Bhardwaj, Fabian Kilpert, Andreas S. Richter, Steffen Heyne, Friederike Dündar, and Thomas Manke. deepTools2: A next Generation Web Server for Deep-Sequencing Data Analysis. Nucleic Acids Research (2016). doi:10.1093/nar/gkw257.     
+3. Joachim Wolff, Devon Ryan, 2019 DNA Methylation data analysis (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html Online; accessed Mon Aug 23 2021
+4. Batut et al., 2018 Community-Driven Data Analysis Training for Biology Cell Systems 10.1016/j.cels.2018.05.012
+5. Krueger, Felix, and Simon R. Andrews. “Bismark: A Flexible Aligner and Methylation Caller for Bisulfite-Seq Applications.” Bioinformatics, vol. 27, no. 11, 2011, pp. 1571–1572., doi:10.1093/bioinformatics/btr167
+6. Devon Ryan, 2021 dpryan79/MethylDackel: A (MOSTLY) UNIVERSAL METHYLATION extractor For BS-seq experiments, https://github.com/dpryan79/MethylDackel
   
 ### Acknowledgements
 We acknowledge the HackBio Team for the platform created to bring us all together learning and working as a team progressively on a bioinformatics track.

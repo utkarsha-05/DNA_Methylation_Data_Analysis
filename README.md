@@ -163,6 +163,8 @@ Finally, the methylation level of our data around the transcription start site (
 ```python 
   plotProfile --matrixFile output_from_ComputeMatrix --outFileName output_from_plotProfile
   ```  
+<p align="center"> <img src="images/FastQC.PNG">
+  
 This plot shows the methylation level around all Transcription Start Sites of chrosome_1. When located at gene promoters, DNA methylation is usually a repressive mark.
 
 ### References 

@@ -21,8 +21,23 @@ The datasets we used are mainly a subset of the data from the publication "Hiera
 
 ### Quality Control
 
-Install fastqc - conda install -c bioconda fastqc
-Run Quality Check-   fastqc subset_1.fastq?download=1  subset_2.fastq?download=1
+- Download the FastQC module
+Note: FASTQC requires java and javac installed for implementation and you need to run the fastqc file from the folder (using the relative/absolute links to the sequence reads)<bR> 
+```python
+  sudo apt install default-jre
+  ```
+```python
+  sudo apt install default-jdk
+  ```
+  Make the “fastqc” an executable file<bR>
+```python 
+  chmod 755 fastqc
+  ```
+- Run the fastqc on all sequenced reads from its folder<bR> 
+```python 
+  fastqc subset_1.fastq?download=1  subset_2.fastq?download=1
+  ```
+  
 If you open the html files you will see the result as follows-
 
 This tells that the per base sequence quality was quite good for the datasets. The mean quality of reads (indicated by the blow lines) showed that even the lowest score is above 28.

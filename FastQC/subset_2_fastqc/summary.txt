@@ -1,0 +1,10 @@
+PASS	Basic Statistics	subset_2.txt
+PASS	Per base sequence quality	subset_2.txt
+PASS	Per sequence quality scores	subset_2.txt
+FAIL	Per base sequence content	subset_2.txt
+WARN	Per sequence GC content	subset_2.txt
+PASS	Per base N content	subset_2.txt
+WARN	Sequence Length Distribution	subset_2.txt
+PASS	Sequence Duplication Levels	subset_2.txt
+PASS	Overrepresented sequences	subset_2.txt
+PASS	Adapter Content	subset_2.txt

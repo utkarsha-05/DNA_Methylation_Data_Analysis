@@ -4,11 +4,16 @@
 Oncogenic transformation of normal cells often involves epigenetic alterations, such as histone modification and DNA methylation. For this analysis, we obtained a subset of the whole genome bisulfite sequencing (WGBS) data to analyse the pattern of DNA methylomes of normal breast and cancerous breast cells. 
 This workflow is a complete reproduction of the workflow mentioned in the Galaxy training material on Methyl-Seq Analysis.
 
-## Dataset and its source
+## **📌 Our Workflow**
+ <p align = "center"> 
+  <kbd> <img src ="https://user-images.githubusercontent.com/88287648/131124866-4f63e72a-6524-418f-8cf6-5786e00de8ac.png" </kbd>
+</p>
+  
+## 📈 Dataset and its source
 
 The datasets we used are mainly a subset of the data from the publication "Hierarchical Clustering     of Breast Cancer Methylomes Revealed Differentially Methylated and Expressed Breast Cancer Genes" (10.1371/journal.pone.0118453). 
 
-## **Lets Move to the Analysis**
+## **Lets Move to the Analysis 👀**
 
 ### Get Data
 
@@ -40,7 +45,7 @@ Note: FASTQC requires java and javac installed for implementation and you need t
   
 If you open the html files you will see the result as follows-
 
-<p align="center"> <img src="images/FastQC.PNG">
+<kbd> <p align="center"> <img src="https://user-images.githubusercontent.com/88287648/131125660-6a6a6eed-eec0-44b0-bd74-9bd76bff8062.png" width = "800" height = "600"> </kbd> </p>
     
 This tells that the per base sequence quality was quite good for the datasets. The mean quality of reads (indicated by the blow lines) showed that even the lowest score is above 28.
 

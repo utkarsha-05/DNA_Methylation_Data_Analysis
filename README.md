@@ -1,10 +1,15 @@
-# DNA_Methylation_Data_Analysis
-## **The Goal of Our Analysis**
+<h1 align="center"> DNA Methylation Data Analysis </h1>
+
+
+<img src = "https://user-images.githubusercontent.com/88287648/131827248-562cf188-40c2-48a6-82c9-75e683cef24d.jpeg">
+
+
+##  📌 The Goal of Our Analysis
 
 Oncogenic transformation of normal cells often involves epigenetic alterations, such as histone modification and DNA methylation. For this analysis, we obtained a subset of the whole genome bisulfite sequencing (WGBS) data to analyse the pattern of DNA methylomes of normal breast and cancerous breast cells. 
 This workflow is a complete reproduction of the workflow mentioned in the Galaxy training material on Methyl-Seq Analysis.
 
-## **📌 Our Workflow**
+## 📝 Our Workflow
  <p align = "center"> 
   <kbd> <img src ="https://user-images.githubusercontent.com/88287648/131124866-4f63e72a-6524-418f-8cf6-5786e00de8ac.png" </kbd>
 </p>
@@ -45,11 +50,12 @@ Note: FASTQC requires java and javac installed for implementation and you need t
   
 If you open the html files you will see the result as follows-
 
-<kbd> <p align="center"> <img src="https://user-images.githubusercontent.com/88287648/131125660-6a6a6eed-eec0-44b0-bd74-9bd76bff8062.png" width = "800" height = "600"> </kbd> </p>
+<p align="center"> <kbd> <img src="https://user-images.githubusercontent.com/88287648/131125660-6a6a6eed-eec0-44b0-bd74-9bd76bff8062.png" width = "800" height = "600"> </kbd> </p> 
     
 This tells that the per base sequence quality was quite good for the datasets. The mean quality of reads (indicated by the blow lines) showed that even the lowest score is above 28.
 
-<p align="center"> <img src="images/FastQC.PNG">
+
+<p align="center">  <kbd> <img src="https://user-images.githubusercontent.com/88287648/131812509-8debe5ec-c545-48aa-ba8f-d97688c3c93f.png" width = "800" height = "600"></kbd> </p> 
 
 The “per base sequence content” segment from the fastq reports shows a drop of “C” and a rise of “T” bases. It’s because- Every C-meth stays a C and every normal C becomes a T during the bisulfite conversion.
 
@@ -91,7 +97,10 @@ Create a folder for moving the chr1 reference genome into that
   ```  		
 Bismark generates a .bam file as its final output. The alignment stats from the Bismark tool is as follows. As we used only Chr1 as our reference genome, it is showing the largest part of the reads for no alignment.
 
-<p align="center"> <img src="images/FastQC.PNG">
+<h3 align = "center "> 
+<kbd><img src="https://user-images.githubusercontent.com/88287648/131815589-b059bd4e-231f-48ca-831c-1fab893ea69c.png" width = "400" height = "500"></kbd>
+
+<kbd><img src = "https://user-images.githubusercontent.com/88287648/131817223-da72afcf-f061-49af-9249-a77b986a8fe8.png" width = "700" height = "500"></kbd>
 
 ### Generating a sorted bam file with Samtools
 
@@ -120,7 +129,7 @@ Now Plot the Methylation Bias
   ```  
 This plot shows distribution of the CpG methylation here is a bit biased along the genome which is not expected. If we were to trim the reads, we would include roughly the positions 0 to 134, for the both strands just to exclude the most biased part from the 3' end. The difference of DNA methylation pattern between the two datasets are clearly visible.
 
-<p align="center"> <img src="images/FastQC.PNG">
+<p align="center"> <kbd> <img src="https://user-images.githubusercontent.com/88287648/131824142-c91f568e-9c40-4071-b4dc-ce6421a72c7b.png"> </kbd>
   
 To extract the methylation on the resulting BAM file of the alignment step 
 ```python 
@@ -168,7 +177,7 @@ Finally, the methylation level of our data around the transcription start site (
 ```python 
   plotProfile --matrixFile output_from_ComputeMatrix --outFileName output_from_plotProfile
   ```  
-<p align="center"> <img src="images/FastQC.PNG">
+<p align="center"><kbd> <img src="https://user-images.githubusercontent.com/88287648/131825989-3e7ce08c-40b0-4a15-955a-391b842af718.png"></kbd>
   
 This plot shows the methylation level around all Transcription Start Sites of chrosome_1. When located at gene promoters, DNA methylation is usually a repressive mark.
 
